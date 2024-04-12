@@ -11,6 +11,3 @@ export PYBUILD_AFTER_TEST=rm -rf {build_dir}/testing
 
 %:
 	dh $@ --with python3 --buildsystem=pybuild
-
-override_dh_missing:
-	dh_missing --fail-missing
