@@ -3,14 +3,15 @@ Section: python
 Priority: optional
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Uploaders: Christian Kastner <ckk@debian.org>
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 13),
                dh-python,
                python3-all,
                python3-py <!nocheck>,
                python3-pytest <!nocheck>,
                python3-setuptools,
+               python3-setuptools-scm,
 Rules-Requires-Root: no
-Standards-Version: 4.5.1
+Standards-Version: 4.6.0
 Homepage: https://github.com/RonnyPfannschmidt/iniconfig
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-iniconfig.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-iniconfig
@@ -19,10 +20,9 @@ Package: python3-iniconfig
 Architecture: all
 Depends: ${misc:Depends}, ${python3:Depends}
 Description: brain-dead simple parsing of ini files
- iniconfig is a small and simple INI-file parser module
- having a unique set of features:
+ iniconfig is a small and simple INI-file parser module having a unique set of
+ features:
  .
-   * tested against Python2.4 across to Python3.2, Jython, PyPy
    * maintains order of sections and entries
    * supports multi-line values with or without line-continuations
    * supports "#" comments everywhere
